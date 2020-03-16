@@ -3,8 +3,8 @@ const { Client, RichEmbed } = require('discord.js');
 const fs = require('fs');
 const client = new Discord.Client();
 
-let profile = require('./profile.json')
-const bot_name = "RiscoY"
+let profile = require('./blank.yml')
+const bot_name = "DarthVaderBot"
 
 var thr;
 var secret_word;
@@ -50,7 +50,7 @@ client.on('message', msg => {
         };
     };
     let u = profile[uid];
-    fs.writeFile('./profile.json', JSON.stringify(profile), (err)=>{
+    fs.writeFile('./blank.yml', JSON.stringify(profile), (err)=>{
         if(err) console.log(err);
     });
 
